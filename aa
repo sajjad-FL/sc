@@ -116,6 +116,26 @@ Replaces GitLab group operations:
 
 createBitbucketGroup / deleteBitbucketGroup — Admin-level group CRUD
 addUserToBitbucketGroup / removeUserFromBitbucketGroup — Manage group membership
+
+
+
+
+
+
+
+
+Other Key Tasks I Completed:
+N/A Approver Bug Fix — Fixed issue where DRR approvals showed "N/A" instead of the approver's name, and notification emails weren't being sent
+Resizable Columns (Vue Good Table Feature) — Full-stack implementation of column resizing with user preferences saved to profile
+QA & PROD Server Setup — Set up new QA and PROD servers
+Session Timeout (15-min inactivity logout) — Implemented per IT security policy
+NGINX Vulnerability Patch — Upgraded NGINX from 1.8/1.2 to 1.31 on both environments
+Request List Export Fix — Fixed MongoDB crash caused by joining large tables before filtering (exceeded 16MB limit); optimized query to filter first
+Notification Email Enhancements — Updated email notifications for Publication and Other Requests, changed links to use scope.jnj.com instead of server hostname
+PHR Auto-Project Creation Bug — Fixed issue where project entries weren't auto-created when a fulfiller wasn't a registered Scope user
+Edit Post-Hoc Requests (JIRA-11) — New feature allowing Scope admins to edit ad-hoc requests without requiring deletion and resubmission
+Message Content Box — New feature implemented
+Project Packaging/Output Configuration — Configured SMMC with custom .ignore file, added Code/Data/Documents/Outputs folders, included discoverTemplates.tgz for DMS-Discovery
 shareProjectWithGroup / unlinkProjectWithGroup — Grant/revoke group-level project access
 Key difference: GitLab used numeric IDs for groups. Bitbucket uses group names as identifiers. The response shape was made backward-compatible (body.id = data.name) so upstream callers didn't break.
 
